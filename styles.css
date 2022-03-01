@@ -93,6 +93,7 @@ body {
     justify-content: center;
     align-items: center;
     user-select: none;
+    transition: transform 250ms linear;
 }
 
 .tile[data-state="active"] {
@@ -114,8 +115,12 @@ body {
     background-color: hsl(115, 29%, 43%);
 }
 
+.tile.flip {
+    transform: rotateX(90deg);
+}
+
 .tile.shake {
-    animation: shake 250ms ease-in-out;
+    animation: shake 500ms ease-in-out;
 }
 
 @keyframes shake {
@@ -136,6 +141,31 @@ body {
     }
     100% {
         transform: translateX(0);
+    }
+}
+
+.tile.dance {
+    animation: dance 750ms infinite;
+}
+
+@keyframes dance {
+    10% {
+        transform: translateY(-2.5%) translateX(0%);
+    }
+    30% {
+        transform: translateY(-5%) translateX(3%);
+    }
+    50% {
+        transform: translateY(-7.5%) translateX(-3%);
+    }
+    70% {
+        transform: translateY(-5%) translateX(3%);
+    }
+    90% {
+        transform: translateY(-2.5%) translateX(-3%);
+    }
+    100% {
+        transform: translateY(0%) translateX(0%);
     }
 }
 
