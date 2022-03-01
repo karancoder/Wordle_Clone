@@ -1,4 +1,4 @@
-# Wordle_Clone
+# Wordle Clone
 
 #### Created a Wordle game clone using only HTML, CSS and Javascript.
 
